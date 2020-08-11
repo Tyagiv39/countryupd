@@ -1,0 +1,20 @@
+.table-org {
+  border: 1px solid black;
+  width: 30%;
+  background-color: tan;
+  border-collapse: collapse;
+  margin-left:auto;
+   margin-right:auto;
+
+}
+th,td{
+  padding: 15px;
+  text-align: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align:center;
+
+}
+#boly{
+  background-color: yellow;
+}
