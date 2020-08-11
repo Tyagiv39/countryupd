@@ -1,0 +1,41 @@
+
+<html>
+<head>
+<title> Countries name </title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body id="boly" >
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+          <script src="/socket.io/socket.io.js"></script>
+
+<div id='dynamic' ></div>
+<script>
+var socket= io();
+socket.on('connect', (data) => {
+
+});
+socket.on('fet', (getcountry)=>{
+  var table1= document.createElement('table');
+    var th= document.createElement('th');
+    var tr = document.createElement('tr');
+    th.append(document.createTextNode('Country Name'));
+    tr.appendChild(th);
+    table1.appendChild(tr);
+getcountry.forEach((countryname,index)=>{
+    var tr = document.createElement('tr');
+    var td = document.createElement('td');
+    var span=document.createElement('span');
+    td.appendChild(span);
+    tr.appendChild(td);
+    span.append(document.createTextNode((index+1)+"." + Object.values(countryname)));
+    table1.appendChild(tr);
+    $(table1).addClass("table-org");
+});
+document.getElementById('dynamic').appendChild(table1);
+});
+</script>
+</body >
+</html>
