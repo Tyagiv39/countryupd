@@ -1,0 +1,42 @@
+
+<html>
+<head>
+<title> Countries name </title>
+</head>
+<body >
+  <table>
+<tbody>
+  <tr>
+    <th>countries name</th>
+  </tr>
+    <tr ><td><span id="i1">mr.</span></td></tr>
+    <tr ><td><span id="i2">hello</span> </td></tr>
+    <tr ><td id="i3">how</td></tr>
+    <tr><td id="i4">are</td></tr>
+    <tr><td id="i5">you</td></tr>
+    <tr><td id="i6">to</td></tr>
+    <tr><td id="i7">dat</td></tr>
+    <tr><td id="i8">hggu</td></tr>
+    <tr><td id="i9">jhvvhj</td></tr>
+</tbody></table>
+<script src="C:\Users\jsrcomputers\Desktop\jquery.js"></script>
+<script>
+//var sd=require('./ads');
+    var ary=require('./database/ads');
+const sleep = ms => {
+  return new Promise(resolve => setTimeout(resolve, ms))
+};
+sleep(10000).then( v=>{
+
+  console.log(ary);
+ $('#i2').html(ary[1]);
+document.getElementById('i1').html(ary[0]);
+
+//});
+//});
+
+
+
+</script>
+</body>
+</html>
